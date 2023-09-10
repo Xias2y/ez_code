@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 int res[100][100];
 
@@ -11,7 +12,7 @@ int main()
 	{
 		res[x][y] = k;
 		int a = x + dx[d], b = y + dy[d];
-		//d负责切换偏移量方向
+		//d赂潞脭冒脟脨禄禄脝芦脪脝脕驴路陆脧貌
 		if (a < 0 || a >= n || b < 0 || b >= m || res[a][b])
 		{
 			d = (d + 1) % 4;
@@ -21,7 +22,7 @@ int main()
 	}
 	for (int i = 0; i < n; i++)
 	{
-		for (int j = 0; j < m ; j++) cout << res[i][j] << ' ';
+		for (int j = 0; j < m ; j++) cout << setw(5) << res[i][j] << ' ';
 		cout << endl;
 	}
 	return 0;
